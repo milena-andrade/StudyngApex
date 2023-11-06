@@ -1,0 +1,21 @@
+public class RegraNegocioPedido {
+
+    // Método para verificar a elegibilidade do pedido para um desconto
+    public static Boolean verificarElegibilidadeDesconto(Decimal valorTotal) {
+        if (valorTotal >= 1000.0) {
+            system.debug('elegível');
+            return true; // Se o valor total for igual ou superior a 1000, o pedido é elegível para desconto.
+            
+        } else {
+            system.debug('não é elegível');
+            return false; // Caso contrário, o pedido não é elegível para desconto.
+            
+        }
+    }
+}
+
+
+
+Decimal valorTotal = 100000.0;
+
+Boolean sim = RegraNegocioPedido.verificarElegibilidadeDesconto(valorTotal);
